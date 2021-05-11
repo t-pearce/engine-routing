@@ -2,7 +2,7 @@
 
 namespace Engine\Routing;
 
-abstract class RouteFactory extends \Engine\Traits\Factory
+abstract class RouteFactory extends \Engine\Abstracts\Factory
 {
 	/**
 	 * @return Route[]
