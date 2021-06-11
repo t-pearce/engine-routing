@@ -6,7 +6,7 @@ abstract class Route
 {
 	use \Engine\Traits\Singleton;
 
-	protected static string $route;
+	public static string $route;
 
 	public final function __construct()
 	{

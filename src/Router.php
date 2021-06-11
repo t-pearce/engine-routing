@@ -7,7 +7,7 @@ class Router
 	use \Engine\Traits\Singleton;
 
 	/** @var RouteFactory[] */
-	private array $routeFactories;
+	private array $routeFactories = [];
 
 	public final function __construct() { }
 
@@ -31,13 +31,13 @@ class Router
 		return $this;
 	}
 
-	public function canHandleRoute(string $route_string) : bool
+	public function canHandleRoute(string $routeString) : bool
 	{
 		foreach($this->routeFactories as $factory)
 		{
 			foreach($factory->getAllRoutes() as $route)
 			{
-				if($route->isRouteFor($route_string))
+				if($route->isRouteFor($routeString))
 					return true;
 			}
 		}
@@ -45,13 +45,13 @@ class Router
 		return false;
 	}
 
-	public function route(string $route_string) : ?\Engine\Page\Page
+	public function route(string $routeString) : ?\Engine\Page\Page
 	{
 		foreach($this->routeFactories as $factory)
 		{
 			foreach($factory->getAllRoutes() as $route)
 			{
-				if($route->isRouteFor($route_string))
+				if($route->isRouteFor($routeString))
 					return $route->getPage();
 			}
 		}
