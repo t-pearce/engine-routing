@@ -68,7 +68,6 @@ class Router
 
 		foreach($this->routeFactories as $factory)
 		{
-			\Engine\Util\Output::p($factory);die;
 			foreach($factory->getAllRoutes() as $route)
 			{
 				$routes[] = $route;
