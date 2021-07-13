@@ -1,0 +1,125 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "a15c84bc4a3e28b601532e133860c4ad",
+    "packages": [
+        {
+            "name": "weirweb/engine",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "../engine",
+                "reference": "e070d8de10845596765f1d131a0ad6c6417ce78a"
+            },
+            "require": {
+                "weirweb/engine-page": "@dev",
+                "weirweb/engine-routing": "@dev"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.81"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Engine\\": "src/"
+                }
+            },
+            "description": "Weirweb Engine"
+        },
+        {
+            "name": "weirweb/engine-page",
+            "version": "dev-develop",
+            "dist": {
+                "type": "path",
+                "url": "../engine-page",
+                "reference": "0d9398f384f3407df34a017d7380ec8463abb8c3"
+            },
+            "require": {
+                "weirweb/engine": "@dev",
+                "weirweb/engine-routing": "@dev"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.81"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Engine\\Page\\": "src/"
+                }
+            },
+            "description": "Weirweb Engine - Page Module"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "phpstan/phpstan",
+            "version": "0.12.86",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpstan.git",
+                "reference": "a84fdc53ecca7643dbc89ef8880d8b393a6c155a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/a84fdc53ecca7643dbc89ef8880d8b393a6c155a",
+                "reference": "a84fdc53ecca7643dbc89ef8880d8b393a6c155a",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1|^8.0"
+            },
+            "conflict": {
+                "phpstan/phpstan-shim": "*"
+            },
+            "bin": [
+                "phpstan",
+                "phpstan.phar"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.12-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPStan - PHP Static Analysis Tool",
+            "funding": [
+                {
+                    "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://www.patreon.com/phpstan",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/phpstan/phpstan",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-05-08T11:29:01+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "weirweb/engine": 20,
+        "weirweb/engine-page": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
+}
