@@ -1,0 +1,25 @@
+{
+    "name": "weirweb/engine-routing",
+    "description": "Weirweb Engine - Routing Module",
+    "version": "1.0",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Engine\\Routing\\": "src/"
+        }
+    },
+    "require": {
+        "weirweb/engine": "@dev",
+        "weirweb/engine-page": "@dev"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../engine"
+        },
+        {
+            "type": "path",
+            "url": "../engine-page"
+        }
+    ]
+}
